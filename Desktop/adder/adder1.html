@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>加法计算器</title>
+</head>
+<body>
+  <h1>加法计算器</h1>
+  <form>
+    <label for="adder1">加数1：</label>
+    <input type="text" id="adder1" name="adder1"><br><br>
+
+    <label for="adder2">加数2：</label>
+    <input type="text" id="adder2" name="adder2"><br><br>
+
+    <button id="myButton">点击提交</button><br><br>
+    
+    
+    <script>
+        const button = document.getElementById("myButton");
+        
+        button.addEventListener("click", function() {
+          let num1 = document.getElementById('adder1').value;
+          let num2 = document.getElementById('adder2').value;
+          let add1 = parseFloat(num1);
+          let add2 = parseFloat(num2);  
+
+          if (isNaN(num1) || isNaN(num2)) {
+            console.error("请输入有效的数字");}
+
+          let sum = add1 + add2;
+          alert("和为：" + sum);
+        });
+      </script>
+  </form>
+</body>
+</html>
+
